@@ -13,7 +13,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.cibuildwheel]
 build = "*"
-skip = "pp* cp36* cp37* cp38*"
+skip = "pp* cp36* cp37* cp38* cp39-win_arm64 cp310-win_arm64"
 test-skip = ""
 free-threaded-support = false
 
