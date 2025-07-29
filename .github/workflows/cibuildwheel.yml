@@ -2,6 +2,8 @@ name: Build
 
 on:
   push:
+    branches:
+      - WoA
     tags:
       # ytf did they invent their own syntax that's almost regex?
       # ** matches 'zero or more of any character'
@@ -14,7 +16,7 @@ jobs:
     strategy:
       matrix:
         # macos-13 is an intel runner, macos-14 is apple silicon
-        os: [ubuntu-latest, windows-latest, macos-13, macos-14]
+        os: [ubuntu-latest, windows-latest, windows-11-arm, macos-13, macos-14]
 
     steps:
       - uses: actions/checkout@v4
